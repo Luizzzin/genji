@@ -1,0 +1,86 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'nodle';
+    src: url(imagem/big_noodle_titling.ttf);
+}
+#principal{
+    display: flex;
+    background-image: url(imagem/background.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: 100%;
+}
+#nomes{
+    display: flex;
+    width: 40vw;
+    height: 50vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+#nomes h1{
+    margin: 30px;
+    margin-left: 92px;
+    color: white;
+}
+#nomes h2{
+    margin: 30px;
+    margin-left: 92px;
+    color: white;
+}
+#nomes h3{
+    margin: 30px;
+    margin-left: 92px;
+    color: black;
+}
+h1{
+    font: 300 96px 'nodle';
+}
+h2{
+    font: 300 45px 'nodle'
+}
+h3{
+    font: 600 35px 'nodle';
+}
+#genji{
+    width: 900px;
+    height: 900px;
+    margin-right: 10px;
+    
+}
+#ninja{
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+    height: 130vh;
+    align-items: end;
+    
+}
+/* main finalizado */
+
+/* começo da frase */
+
+#frase{
+    display: flex;
+    width: 100vw;
+    height: 548px;
+    background-color: red;
+    position:  relative;
+    flex-direction: column;
+}
+.retangulo{
+    width: 100vw;
+    height: 50px;
+    background-color: #A1D01A;
+    top: -25px;
+    display: flex;
+    flex-direction: column;
+}
+#retangulo2{
+    
+}
