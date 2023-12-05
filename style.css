@@ -52,6 +52,9 @@ h2{
 h3{
     font: 600 35px 'nodle';
 }
+p{
+    font: 100 26px 'nodle'
+}
 #genji{
     width: 900px;
     height: 900px;
@@ -88,10 +91,24 @@ h3{
     display: flex;
 } 
 #trapezio{
+    display: flex;
     background-image: url(imagem/trapezio.png);
     height: 548px;
-    width: 60vw;
+    width: 55vw;
     background-size: 1000px 830px;
     background-repeat: no-repeat;
-
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 210px;
+    
+}
+#lamina{
+margin-bottom: 70px;
+margin-left: 50px;
+}
+#negocio{
+    color: white;
+    text-align: center;
+    margin-left: 50px;
 }
