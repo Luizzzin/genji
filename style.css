@@ -90,6 +90,8 @@ h3{
 #trapezio{
     background-image: url(imagem/trapezio.png);
     height: 548px;
-    background-size: 100px;
+    width: 60vw;
+    background-size: 1000px 830px;
     background-repeat: no-repeat;
+
 }
