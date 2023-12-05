@@ -8,10 +8,15 @@
     font-family: 'nodle';
     src: url(imagem/big_noodle_titling.ttf);
 }
+#inicio{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
 #principal{
     display: flex;
     background-image: url(imagem/background.png);
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     background-size: 100%;
 }
@@ -67,20 +72,24 @@ h3{
 
 #frase{
     display: flex;
-    width: 100vw;
-    height: 548px;
-    background-color: red;
+    width: 99vw;
+    height: 608px;
     position:  relative;
+    justify-content: center;
     flex-direction: column;
+    background-image: url(imagem/genjo.png) ;
+    justify-content: center;
+    background-size: 100vw 590px;
 }
 .retangulo{
-    width: 100vw;
-    height: 50px;
+    width: 99vw;
+    height: 35px;
     background-color: #A1D01A;
-    top: -25px;
     display: flex;
-    flex-direction: column;
-}
-#retangulo2{
-    margin-top: 500px;
+} 
+#trapezio{
+    background-image: url(imagem/trapezio.png);
+    height: 548px;
+    background-size: 100px;
+    background-repeat: no-repeat;
 }
