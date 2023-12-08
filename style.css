@@ -31,12 +31,12 @@
 #nomes h1{
     margin: 30px;
     margin-left: 92px;
-    color: white;
+    color: rgb(99, 99, 99);
 }
 #nomes h2{
     margin: 30px;
     margin-left: 92px;
-    color: white;
+    color: black;
 }
 #nomes h3{
     margin: 30px;
@@ -56,8 +56,8 @@ p{
     font: 100 26px 'nodle'
 }
 #genji{
-    width: 900px;
-    height: 900px;
+    width: 1000px;
+    height: 1000px;
     margin-right: 10px;
     
 }
@@ -67,6 +67,7 @@ p{
     width: 70vw;
     height: 130vh;
     align-items: end;
+    
     
 }
 /* main finalizado */
@@ -82,7 +83,8 @@ p{
     flex-direction: column;
     background-image: url(imagem/genjo.png) ;
     justify-content: center;
-    background-size: 100vw 590px;
+    background-size: 95vw 590px;
+    background-position: right;
 }
 .retangulo{
     width: 99vw;
@@ -94,8 +96,8 @@ p{
     display: flex;
     background-image: url(imagem/trapezio.png);
     height: 548px;
-    width: 55vw;
-    background-size: 1000px 830px;
+    width: 60vw;
+    background-size: 1300px 830px;
     background-repeat: no-repeat;
     justify-content: center;
     flex-direction: column;
@@ -106,6 +108,7 @@ p{
 #lamina{
 margin-bottom: 70px;
 margin-left: 50px;
+font: 600 60px 'nodle';
 color: #3D5200;
 }
 #negocio{
@@ -113,3 +116,35 @@ color: #3D5200;
     text-align: center;
     margin-left: 50px;
 }
+
+/* botaozinho */
+
+#botao{
+    width: 70px;
+    height: 70px;
+    transition: ease 0.3s;
+    position: absolute;
+    z-index: 1;
+    background-image: url(imagem/logo.png);
+    background-size: 100%;
+}
+#botao:hover{
+background-color: brown;
+}
+#minhaDiv {
+    width: 80vw;
+    height: 100px;
+    display: none;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+#botao2{
+    width: 70px;
+    height: 70px;
+    transition: ease 0.3s;
+    position: absolute;
+    background-image: url(imagem/logo.png);
+    background-size: 100%;
+}
+
+/* fim botaozinho */
