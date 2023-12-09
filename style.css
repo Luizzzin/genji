@@ -1,26 +1,30 @@
-*{
+* {
     border: 0;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: 'nodle';
     src: url(imagem/big_noodle_titling.ttf);
 }
-#inicio{
+
+#inicio {
     width: 100px;
     height: 100px;
     background-color: red;
 }
-#principal{
+
+#principal {
     display: flex;
     background-image: url(imagem/background.png);
     width: 99vw;
     height: 100vh;
     background-size: 100%;
 }
-#nomes{
+
+#nomes {
     display: flex;
     width: 40vw;
     height: 55vh;
@@ -28,71 +32,83 @@
     align-items: flex-start;
     justify-content: flex-end;
 }
-#nomes h1{
+
+#nomes h1 {
     margin: 30px;
     margin-left: 92px;
     color: rgb(99, 99, 99);
 }
-#nomes h2{
+
+#nomes h2 {
     margin: 30px;
     margin-left: 92px;
     color: black;
 }
-#nomes h3{
+
+#nomes h3 {
     margin: 30px;
     margin-left: 92px;
     color: black;
 }
-h1{
+
+h1 {
     font: 300 96px 'nodle';
 }
-h2{
+
+h2 {
     font: 300 45px 'nodle'
 }
-h3{
+
+h3 {
     font: 600 35px 'nodle';
 }
-p{
+
+p {
     font: 100 26px 'nodle'
 }
-#genji{
+
+#genji {
     width: 1000px;
     height: 1000px;
     margin-right: 10px;
-    
+
 }
-#ninja{
+
+#ninja {
     display: flex;
     justify-content: center;
     width: 70vw;
     height: 130vh;
     align-items: end;
-    
-    
+
+
 }
+
 /* main finalizado */
 
 /* começo da frase */
 
-#frase{
+#frase {
     display: flex;
     width: 99vw;
     height: 608px;
-    position:  relative;
+    position: relative;
     justify-content: center;
     flex-direction: column;
-    background-image: url(imagem/genjo.png) ;
+    background-image: url(imagem/genjo.png);
     justify-content: center;
-    background-size: 95vw 590px;
+    background-size: 80vw 590px;
     background-position: right;
 }
-.retangulo{
+
+.retangulo {
     width: 99vw;
     height: 35px;
     background-color: #A1D01A;
     display: flex;
-} 
-#trapezio{
+}
+
+#trapezio {
     display: flex;
     background-image: url(imagem/trapezio.png);
     height: 548px;
@@ -103,48 +119,87 @@ p{
     flex-direction: column;
     align-items: center;
     padding-right: 210px;
-    
+
 }
-#lamina{
-margin-bottom: 70px;
-margin-left: 50px;
-font: 600 60px 'nodle';
-color: #3D5200;
+
+#lamina {
+    margin-bottom: 70px;
+    margin-left: 50px;
+    font: 500 60px 'nodle';
+    color: #3D5200;
 }
-#negocio{
+
+#negocio {
     color: white;
     text-align: center;
     margin-left: 50px;
+    font: 300 32px 'nodle';
 }
 
 /* botaozinho */
 
-#botao{
+#botao {
     width: 70px;
     height: 70px;
-    transition: ease 0.3s;
+    margin-left: 30px;
+    margin-top: 10px;
     position: absolute;
-    z-index: 1;
+
     background-image: url(imagem/logo.png);
     background-size: 100%;
+    transition: ease 0.3s;
 }
-#botao:hover{
-background-color: brown;
+
+#botao:hover {
+    background-image: url(imagem/logoDois.png);
+    background-position: center;
 }
+
 #minhaDiv {
-    width: 80vw;
+    display: flex;
+    width: 99vw;
     height: 100px;
-    display: none;
-    background-color: #f1f1f1;
-    text-align: center;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
 }
-#botao2{
+
+#botao2 {
     width: 70px;
     height: 70px;
     transition: ease 0.3s;
-    position: absolute;
     background-image: url(imagem/logo.png);
     background-size: 100%;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+#botao2:hover {
+    background-image: url(imagem/logoDois.png);
+    background-position: center;
+}
+
+#over{
+    width: 200px;
 }
 
 /* fim botaozinho */
+
+/* carrosel de habilidades */
+#carrosel{
+    display: flex;
+    width: 99vw;
+    height: 100vh;
+    background: rgb(161,208,26);
+background: linear-gradient(180deg, rgba(161,208,26,1) 30%, rgba(215,212,208,1) 100%);
+}
+
+#habili, h1{
+font: 400 80px 'nodle';
+color: #3D5200;
+margin-left: 50px;
+margin-top: 30px;
+}
+
+/* fim carrosel de habilidades */
