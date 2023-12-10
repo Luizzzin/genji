@@ -148,6 +148,7 @@ p {
     background-image: url(imagem/logo.png);
     background-size: 100%;
     transition: ease 0.3s;
+    cursor: pointer;
 }
 
 #botao:hover {
@@ -169,37 +170,72 @@ p {
 #botao2 {
     width: 70px;
     height: 70px;
+    background-position: center;
     transition: ease 0.3s;
     background-image: url(imagem/logo.png);
     background-size: 100%;
     margin-left: 30px;
     margin-top: 10px;
+    cursor: pointer;
+    margin-right: 30px;
+    
 }
+
 #botao2:hover {
     background-image: url(imagem/logoDois.png);
     background-position: center;
 }
 
-#over{
+#over {
     width: 200px;
+}
+
+#logos {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 100px;
+
+}
+
+#hub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60vw;
+}
+
+.hubs {
+    font: 300 28px 'nodle';
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.hubs:hover {
+    color: #fb9b1c;
 }
 
 /* fim botaozinho */
 
 /* carrosel de habilidades */
-#carrosel{
+#carrosel {
     display: flex;
     width: 99vw;
     height: 100vh;
-    background: rgb(161,208,26);
-background: linear-gradient(180deg, rgba(161,208,26,1) 30%, rgba(215,212,208,1) 100%);
+    background: rgb(161, 208, 26);
+    background: linear-gradient(180deg, rgba(161, 208, 26, 1) 30%, rgba(215, 212, 208, 1) 100%);
 }
 
-#habili, h1{
-font: 400 80px 'nodle';
-color: #3D5200;
-margin-left: 50px;
-margin-top: 30px;
+#habili,
+h1 {
+    font: 400 80px 'nodle';
+    color: #3D5200;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 
 /* fim carrosel de habilidades */

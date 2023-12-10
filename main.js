@@ -7,6 +7,6 @@ function abrir() {
         botao.style.display = "none"
     } else {
         minhaDiv.style.display = "none";
-        botao.style.display = "block"
+        botao.style.display = "block";
     }
 }
