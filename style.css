@@ -249,6 +249,16 @@ h1 {
 .poder {
     display: flex;
     background-color: gray;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    
+}
+#poder-ult{
+    background-image: url(imagem/ult.jpg);
+    background-size: 198%;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
 
