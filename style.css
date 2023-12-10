@@ -81,7 +81,6 @@ p {
     height: 130vh;
     align-items: end;
 
-
 }
 
 /* main finalizado */
@@ -178,7 +177,7 @@ p {
     margin-top: 10px;
     cursor: pointer;
     margin-right: 30px;
-    
+
 }
 
 #botao2:hover {
@@ -226,6 +225,8 @@ p {
     display: flex;
     width: 99vw;
     height: 100vh;
+   flex-direction: column;
+   justify-content: start;
     background: rgb(161, 208, 26);
     background: linear-gradient(180deg, rgba(161, 208, 26, 1) 30%, rgba(215, 212, 208, 1) 100%);
 }
@@ -238,6 +239,17 @@ h1 {
     margin-top: 30px;
 }
 
+#habilidades-caro {
+    display: flex;
+    width: 99vw;
+    height: 80vh;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.poder {
+    display: flex;
+    background-color: gray;
 
+}
 
 /* fim carrosel de habilidades */
