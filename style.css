@@ -95,7 +95,7 @@ p {
     flex-direction: column;
     background-image: url(imagem/genjo.png);
     justify-content: center;
-    background-size: 100vw 590px;
+    background-size: 100vw 610px;
     background-position: right;
 }
 
@@ -104,6 +104,7 @@ p {
     height: 35px;
     background-color: #A1D01A;
     display: flex;
+    display: none;
 }
 
 #trapezio {
@@ -111,7 +112,7 @@ p {
     background-image: url(imagem/trapezio.png);
     height: 558px;
     width: 55vw;
-    background-size: 900px 572px;
+    background-size: 900px 602px;
     background-repeat: no-repeat;
     justify-content: center;
     flex-direction: column;
@@ -228,13 +229,13 @@ p {
    flex-direction: column;
    justify-content: start;
     background: rgb(161, 208, 26);
-    background: linear-gradient(180deg, rgba(161, 208, 26, 1) 30%, rgba(215, 212, 208, 1) 100%);
+    background: linear-gradient(180deg, rgb(131, 163, 36) 30%, rgba(215, 212, 208, 1) 100%);
 }
 
 #habili,
 h1 {
     font: 400 80px 'nodle';
-    color: #3D5200;
+    color: #b6e91e;
     margin-left: 50px;
     margin-top: 30px;
 }
@@ -365,14 +366,14 @@ h1 {
     height: 50px;
     /* background-color: blue; */
     justify-content: center;
-    color: rgb(82, 82, 82);
+    color: #A1D01A;
+        
 }
 
 #ferramentas{
 display: flex;
 width: 800px;
-height: 130px;
-background-color: gray;
+height: 130px; 
 border-radius: 10px;
 margin-top: 10px;
 justify-content: space-around;
@@ -381,5 +382,32 @@ justify-content: space-around;
 .bloco{
     width: 250px;
     height: 130px;
-    background-color: red;
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+.formas{
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgb(159, 159, 159);
+}
+#titulo{
+width: 250px;
+margin-top: 10px;
+display: flex;
+justify-content: center;
+font: 100 22px 'nodle';
+}
+#bola{
+ border-radius: 50%;
+}
+#triangulo{
+width: 50px; 
+  height: 50px; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #5386E4;
+  
 }
