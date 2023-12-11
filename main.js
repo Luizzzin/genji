@@ -5,7 +5,7 @@ function abrir() {
     if (minhaDiv.style.display === "none") {
         minhaDiv.style.display = "flex";
         botao.style.display = "none"
-        minhaDiv.style.opacity = 1;
+        
     } else {
         minhaDiv.style.display = "none";
         botao.style.display = "block";
