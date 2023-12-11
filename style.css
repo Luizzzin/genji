@@ -78,9 +78,8 @@ p {
     display: flex;
     justify-content: center;
     width: 70vw;
-    height: 130vh;
+    height: 140vh;
     align-items: end;
-
 }
 
 /* main finalizado */
@@ -96,7 +95,7 @@ p {
     flex-direction: column;
     background-image: url(imagem/genjo.png);
     justify-content: center;
-    background-size: 80vw 590px;
+    background-size: 100vw 590px;
     background-position: right;
 }
 
@@ -110,9 +109,9 @@ p {
 #trapezio {
     display: flex;
     background-image: url(imagem/trapezio.png);
-    height: 548px;
-    width: 60vw;
-    background-size: 1300px 830px;
+    height: 558px;
+    width: 55vw;
+    background-size: 900px 572px;
     background-repeat: no-repeat;
     justify-content: center;
     flex-direction: column;
@@ -124,7 +123,7 @@ p {
 #lamina {
     margin-bottom: 70px;
     margin-left: 50px;
-    font: 500 60px 'nodle';
+    font: 500 52px 'nodle';
     color: #3D5200;
 }
 
@@ -132,9 +131,10 @@ p {
     color: white;
     text-align: center;
     margin-left: 50px;
-    font: 300 32px 'nodle';
+    font: 300 30px 'nodle';
+    flex-direction: column;
+    justify-content: space-around;
 }
-
 /* botaozinho */
 
 #botao {
@@ -164,6 +164,8 @@ p {
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
 }
 
 #botao2 {
@@ -253,8 +255,8 @@ h1 {
 .poder {
     display: flex;
     background-color: gray;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     border-radius: 20px;
     padding: 20px;
     transition: 0.5s;
@@ -277,6 +279,7 @@ h1 {
     background-size: 198%;
     background-position: center;
     background-repeat: no-repeat;
+    transform: translateX(0); 
     transition: ease 0.3s;
 }
 #poder-desviar:hover{
@@ -288,6 +291,7 @@ h1 {
     background-size: 198%;
     background-position: center;
     background-repeat: no-repeat;
+    transform: translateX(0); 
     transition: ease 0.3s;
 }
 #poder-shuriken:hover{
@@ -297,12 +301,12 @@ h1 {
 /* botoes do carrosel */
 #proximo{
     display: flex;
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    margin-left: 40px;
     font-weight: bolder;
     cursor: pointer;
     color: #fff;
@@ -314,12 +318,12 @@ h1 {
 
 #antes{
     display: flex;
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    margin-right: 40px;
     font-weight: bolder;
     cursor: pointer;
     color: #fff;
@@ -335,5 +339,43 @@ h1 {
     display: flex;
     width: 99vw;
     height: 100vh;
-    background-image: url();
+    background-image: url(imagem/fundoDesenho.png);
+    background-position: start;
+    background-size: 100%;
+    background-color: #d7d4d0;
+    justify-content: end;
+}
+#canto{
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: red; */
+    align-items: center;
+}
+#desenhar{
+    width: 800px;
+    height: 520px;
+    /* background-color: yellow; */
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #f0ece7;
+}
+#status{
+    display: flex;
+    width: 800px;
+    height: 50px;
+    /* background-color: blue; */
+    justify-content: center;
+    color: rgb(82, 82, 82);
+}
+
+#ferramentas{
+display: flex;
+width: 800px;
+height: 130px;
+background-color: gray;
+border-radius: 10px;
+margin-top: 10px;
+justify-content: space-around;
 }

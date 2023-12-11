@@ -5,6 +5,7 @@ function abrir() {
     if (minhaDiv.style.display === "none") {
         minhaDiv.style.display = "flex";
         botao.style.display = "none"
+        minhaDiv.style.opacity = 1;
     } else {
         minhaDiv.style.display = "none";
         botao.style.display = "block";
@@ -29,7 +30,7 @@ function loadShow() {
 
     for (let i = active + 1; i < items.length; i++) {
         stt--;
-        items[i].style.transform = `translateX(${120 * stt}px) scale(${1 - 0.2 * Math.abs(stt)}) perspective(20px) rotateY(-1deg)`;
+        items[i].style.transform = `translateX(${105 * stt}px) scale(${1 - 0.2 * Math.abs(stt)}) perspective(20px) rotateY(-1deg)`;
         items[i].style.zIndex = -stt;
         items[i].style.filter = 'blur(5px)';
         items[i].style.opacity = stt > 2 ? 0 : 0.9;
@@ -38,10 +39,11 @@ function loadShow() {
     stt = 0;
     for (let i = active - 1; i >= 0; i--) {
         stt--;
-        items[i].style.transform = `translateX(${-120 * stt}px) scale(${1 - 0.2 * Math.abs(stt)}) perspective(20px) rotateY(1deg)`;
+        items[i].style.transform = `translateX(${-105 * stt}px) scale(${1 - 0.2 * Math.abs(stt)}) perspective(20px) rotateY(1deg)`;
         items[i].style.zIndex = -stt;
         items[i].style.filter = 'blur(5px)';
         items[i].style.opacity = stt > 1 ? 0 : 0.9;
+        
     }
 }
 
