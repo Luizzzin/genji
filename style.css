@@ -241,12 +241,14 @@ h1 {
 
 .habilidades-caro {
     display: flex;
+    position: relative;
     width: 99vw;
     height: 80vh;
-    border: 1px solid black;
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    
 }
 .poder {
     display: flex;
@@ -254,12 +256,17 @@ h1 {
     width: 500px;
     height: 500px;
     border-radius: 20px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 250px);
 }
 #poder-ult{
     background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.00) 30.96%, #000 100%) , url(imagem/ult.jpg);
     background-size: 198%;
     background-position: center;
     background-repeat: no-repeat;
+    transform: translateX(0); 
+    transition: ease 0.3s;
 }
 #poder-ult:hover{
     background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.6) 30.96%, #000 100%) , url(imagem/ult.jpg);
@@ -270,6 +277,7 @@ h1 {
     background-size: 198%;
     background-position: center;
     background-repeat: no-repeat;
+    transition: ease 0.3s;
 }
 #poder-desviar:hover{
     background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.6) 30.96%, #000 100%) , url(imagem/desviar.png);
@@ -288,16 +296,44 @@ h1 {
 
 /* botoes do carrosel */
 #proximo{
-    font-size: xxx-large;
-    margin-left: 20px;
+    display: flex;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
     font-weight: bolder;
     cursor: pointer;
+    color: #fff;
+    background-color:#3D5200;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
 }
 
 #antes{
-    font-size: xxx-large;
-    margin-right: 20px;
+    display: flex;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
     font-weight: bolder;
     cursor: pointer;
+    color: #fff;
+    background-color: #3D5200;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
 }
 /* fim carrosel de habilidades */
+
+/* desenhos */
+#geral{
+    display: flex;
+    width: 99vw;
+    height: 100vh;
+    background-image: url();
+}

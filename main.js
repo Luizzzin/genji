@@ -13,47 +13,46 @@ function abrir() {
 
 // ------------//
 
-let poderes = document.querySelectorAll('.habilidades-caro .poder');
-let proximo = document.getElementById('proximo');
-let antes = document.getElementById('antes');
+let items = document.querySelectorAll('.habilidades-caro .poder');
+let next = document.getElementById('proximo');
+let prev = document.getElementById('antes');
 
-let comeco = 1;
+let active = 1;
 
-function carregar() {
-    let status = 0;
+function loadShow() {
+    let stt = 0;
 
-    poderes[comeco].style.transform = `none`;
-    poderes[comeco].style.zIndex = 1;
-    poderes[comeco].style.filter = 'none';
-    poderes[comeco].style.opacity = 1;
+    items[active].style.transform = `none`;
+    items[active].style.zIndex = 2;
+    items[active].style.filter = 'none';
+    items[active].style.opacity = 1;
 
-    for (var i = comeco + 1; i < poderes.length; i++) {
-        status++;
-        poderes[i].style.transform = `translateX(${120 * status}px) scale(${1 - 0.2 * status}) perspective(16px) rotateY(-1deg)`;
-        poderes[i].style.zIndex = -status;
-        poderes[i].style.filter = 'blur(5px)';
-        poderes[i].style.opacity = status > 2 ? 0 : 0.6;
+    for (let i = active + 1; i < items.length; i++) {
+        stt--;
+        items[i].style.transform = `translateX(${120 * stt}px) scale(${1 - 0.2 * Math.abs(stt)}) perspective(20px) rotateY(-1deg)`;
+        items[i].style.zIndex = -stt;
+        items[i].style.filter = 'blur(5px)';
+        items[i].style.opacity = stt > 2 ? 0 : 0.9;
     }
 
-    status = 0;
-
-    for (var i = comeco - 1; i >= 0; i--) {
-        status++;
-        poderes[i].style.transform = `translateX(${-120 * status}px) scale(${1 - 0.2 * status}) perspective(16px) rotateY(1deg)`;
-        poderes[i].style.zIndex = -status;
-        poderes[i].style.filter = 'blur(5px)';
-        poderes[i].style.opacity = status > 2 ? 0 : 0.6;
+    stt = 0;
+    for (let i = active - 1; i >= 0; i--) {
+        stt--;
+        items[i].style.transform = `translateX(${-120 * stt}px) scale(${1 - 0.2 * Math.abs(stt)}) perspective(20px) rotateY(1deg)`;
+        items[i].style.zIndex = -stt;
+        items[i].style.filter = 'blur(5px)';
+        items[i].style.opacity = stt > 1 ? 0 : 0.9;
     }
 }
 
-carregar();
+loadShow();
 
-proximo.onclick = function() {
-    comeco = comeco + 1 < poderes.length ? comeco + 1 : comeco;
-    carregar();
-};
+next.onclick = function () {
+    active = active + 1 < items.length ? active + 1 : active;
+    loadShow();
+}
 
-antes.onclick = function() {
-    comeco = comeco - 1 >= 0 ? comeco - 1 : comeco;
-    carregar();
-};
+prev.onclick = function () {
+    active = active - 1 >= 0 ? active - 1 : active;
+    loadShow();
+}
