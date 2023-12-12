@@ -113,4 +113,7 @@ function obterPosicaoMouse(e) {
     };
 }
 
-
+// ------
+function voltarParaInicio() {
+    window.scrollTo(0, 0);
+}

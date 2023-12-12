@@ -519,6 +519,11 @@ input {
     background-position: center;
     background-size: 100%;
     background-image: url(imagem/logo.png);
+    cursor: pointer;
+    transition: 0.3s;
+}
+#img__footer:hover{
+    background-image: url(imagem/logoDois.png);
 }
 
 #hr{
