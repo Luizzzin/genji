@@ -263,6 +263,7 @@ h1 {
     transition: 0.5s;
     left: calc(50% - 250px);
 }
+
 /* primeiro poder */
 #poder-ult {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 30.96%, #000 100%), url(imagem/ult.jpg);
@@ -275,7 +276,8 @@ h1 {
     align-items: end;
     justify-content: center;
 }
-#descricao_ult{
+
+#descricao_ult {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -285,14 +287,17 @@ h1 {
     height: 350px;
     color: white;
 }
-#descricao_ult h2{
+
+#descricao_ult h2 {
     font: 400 50px 'nodle';
     margin-bottom: 30px;
 }
-#descricao_ult h4{
+
+#descricao_ult h4 {
     color: #A1D01A;
-   font: 300 20px 'nodle';
+    font: 300 20px 'nodle';
 }
+
 /* fim */
 /* segunda */
 #poder-desviar {
@@ -306,7 +311,8 @@ h1 {
     align-items: end;
     justify-content: center;
 }
-#descricao_desviar{
+
+#descricao_desviar {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -316,13 +322,15 @@ h1 {
     height: 350px;
     color: white;
 }
-#descricao_desviar h2{
+
+#descricao_desviar h2 {
     font: 400 50px 'nodle';
     margin-bottom: 30px;
 }
-#descricao_desviar h4{
+
+#descricao_desviar h4 {
     color: #A1D01A;
-   font: 300 20px 'nodle';
+    font: 300 20px 'nodle';
 }
 
 /* ultima */
@@ -337,7 +345,8 @@ h1 {
     align-items: end;
     justify-content: center;
 }
-#descricao_shuriken{
+
+#descricao_shuriken {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -347,13 +356,15 @@ h1 {
     height: 350px;
     color: white;
 }
-#descricao_shuriken h2{
+
+#descricao_shuriken h2 {
     font: 400 50px 'nodle';
     margin-bottom: 30px;
 }
-#descricao_shuriken h4{
+
+#descricao_shuriken h4 {
     color: #A1D01A;
-   font: 300 20px 'nodle';
+    font: 300 20px 'nodle';
 }
 
 /* ultima */
@@ -461,27 +472,56 @@ h1 {
 }
 
 /* segundo bloco */
-#options{
+#options {
     display: flex;
     justify-content: center;
     align-items: center;
 }
- #aparato{
+
+#aparato {
     width: 70px;
     height: 70px;
-    margin:10px;
- }
+    margin: 10px;
+}
+
 /* --- */
 /* terceiro bloco */
-#colors{
+#colors {
     display: flex;
     align-items: center;
 }
-input{
+
+input {
     margin-top: 30px;
     margin-bottom: 50px;
 }
-#largura{
-   height: 30px;
-   width: 60px;
+
+#largura {
+    height: 30px;
+    width: 60px;
+}
+
+/* footer */
+#footer {
+    display: flex;
+    width: 99vw;
+    height: 100px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+
+}
+#img__footer{
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(imagem/logo.png);
+}
+
+#hr{
+    width: 600px;
+    border: 2px solid #fb9b1c;
 }
