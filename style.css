@@ -371,7 +371,7 @@ h1 {
 #status {
     display: flex;
     width: 800px;
-    height: 50px;
+    height: 100px;
     /* background-color: blue; */
     justify-content: center;
     color: black;
