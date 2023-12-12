@@ -316,7 +316,16 @@ h1 {
     height: 350px;
     color: white;
 }
+#descricao_desviar h2{
+    font: 400 50px 'nodle';
+    margin-bottom: 30px;
+}
+#descricao_desviar h4{
+    color: #A1D01A;
+   font: 300 20px 'nodle';
+}
 
+/* ultima */
 #poder-shuriken {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 30.96%, #000 100%), url(imagem/shuriken.png);
     background-size: 198%;
@@ -324,7 +333,30 @@ h1 {
     background-repeat: no-repeat;
     transform: translateX(0);
     transition: ease 0.3s;
+    display: flex;
+    align-items: end;
+    justify-content: center;
 }
+#descricao_shuriken{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+    height: 350px;
+    color: white;
+}
+#descricao_shuriken h2{
+    font: 400 50px 'nodle';
+    margin-bottom: 30px;
+}
+#descricao_shuriken h4{
+    color: #A1D01A;
+   font: 300 20px 'nodle';
+}
+
+/* ultima */
 /* botoes do carrosel */
 #proximo {
     display: flex;
