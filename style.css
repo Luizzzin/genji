@@ -256,8 +256,8 @@ h1 {
 .poder {
     display: flex;
     background-color: gray;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     border-radius: 20px;
     padding: 20px;
     transition: 0.5s;
@@ -265,6 +265,9 @@ h1 {
 }
 
 /* primeiro poder */
+#pezinho {
+    font: 100 20px 'nodle'
+}
 #poder-ult {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 30.96%, #000 100%), url(imagem/ult.jpg);
     background-size: 198%;
@@ -283,13 +286,13 @@ h1 {
     align-items: start;
     flex-direction: column;
     justify-content: space-around;
-    width: 500px;
+    width: 400px;
     height: 350px;
     color: white;
 }
 
 #descricao_ult h2 {
-    font: 400 50px 'nodle';
+    font: 400 40px 'nodle';
     margin-bottom: 30px;
 }
 
@@ -318,7 +321,7 @@ h1 {
     align-items: start;
     flex-direction: column;
     justify-content: space-around;
-    width: 500px;
+    width: 400px;
     height: 350px;
     color: white;
 }
@@ -352,7 +355,7 @@ h1 {
     align-items: start;
     flex-direction: column;
     justify-content: space-around;
-    width: 500px;
+    width: 400px;
     height: 350px;
     color: white;
 }
