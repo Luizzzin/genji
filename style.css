@@ -362,8 +362,6 @@ h1 {
 }
 
 #desenhar {
-    width: 800px;
-    height: 520px;
     /* background-color: yellow; */
     border: 2px solid black;
     border-radius: 20px;
@@ -449,4 +447,8 @@ h1 {
 input{
     margin-top: 30px;
     margin-bottom: 50px;
+}
+#largura{
+   height: 30px;
+   width: 60px;
 }

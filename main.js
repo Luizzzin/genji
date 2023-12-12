@@ -5,7 +5,7 @@ function abrir() {
     if (minhaDiv.style.display === "none") {
         minhaDiv.style.display = "flex";
         botao.style.display = "none"
-        
+
     } else {
         minhaDiv.style.display = "none";
         botao.style.display = "block";
@@ -43,7 +43,7 @@ function loadShow() {
         items[i].style.zIndex = -stt;
         items[i].style.filter = 'blur(5px)';
         items[i].style.opacity = stt > 1 ? 0 : 0.9;
-        
+
     }
 }
 
@@ -58,3 +58,5 @@ prev.onclick = function () {
     active = active - 1 >= 0 ? active - 1 : active;
     loadShow();
 }
+// ------ desenho agr
+
