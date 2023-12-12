@@ -60,54 +60,51 @@ prev.onclick = function () {
 }
 // ------ desenho agr
 
-// main.js
-
-// Obtenha o canvas e o contexto
 var canvas = document.getElementById("desenhar");
 var ctx = canvas.getContext("2d");
 
-// Defina variáveis para rastrear se o mouse está pressionado e a posição anterior
+
 var desenhando = false;
 var posicaoAnterior = { x: 0, y: 0 };
 
-// Configure os eventos do mouse
+
 canvas.addEventListener("mousedown", iniciarDesenho);
 canvas.addEventListener("mouseup", pararDesenho);
 canvas.addEventListener("mousemove", desenhar);
 
-// Função chamada quando o mouse é pressionado
+
 function iniciarDesenho(e) {
     desenhando = true;
     posicaoAnterior = obterPosicaoMouse(e);
 }
 
-// Função chamada quando o mouse é solto
+
 function pararDesenho() {
     desenhando = false;
 }
 
-// Função chamada quando o mouse se move
+
 function desenhar(e) {
     if (!desenhando) return;
 
     var posicaoAtual = obterPosicaoMouse(e);
 
-    // Configurar as propriedades do contexto, como cor e largura da linha
+
     ctx.lineWidth = document.getElementById("largura").value;
     ctx.lineCap = "round";
     ctx.strokeStyle = document.querySelector("#colors input[type=color]").value;
 
-    // Desenhar uma linha entre a posição anterior e a posição atual
+
     ctx.beginPath();
     ctx.moveTo(posicaoAnterior.x, posicaoAnterior.y);
     ctx.lineTo(posicaoAtual.x, posicaoAtual.y);
     ctx.stroke();
 
-    // Atualizar a posição anterior para a posição atual
+   
     posicaoAnterior = posicaoAtual;
 }
 
-// Função auxiliar para obter a posição do mouse em relação ao canvas
+
 function obterPosicaoMouse(e) {
     var retangulo = canvas.getBoundingClientRect();
     return {
