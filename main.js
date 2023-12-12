@@ -60,68 +60,60 @@ prev.onclick = function () {
 }
 // ------ desenho agr
 
-// Pega o elemento canvas do HTML
-let canvas = document.getElementById("desenhar");
+// main.js
 
-// Pega o contexto de desenho 2D do canvas
-let contexto = canvas.getContext("2d");
+// Obtenha o canvas e o contexto
+var canvas = document.getElementById("desenhar");
+var ctx = canvas.getContext("2d");
 
-// Variável para identificar se estamos desenhando
-let desenhando = false;
+// Defina variáveis para rastrear se o mouse está pressionado e a posição anterior
+var desenhando = false;
+var posicaoAnterior = { x: 0, y: 0 };
 
-// Largura inicial do pincel
-let larguraPincel = 2;
+// Configure os eventos do mouse
+canvas.addEventListener("mousedown", iniciarDesenho);
+canvas.addEventListener("mouseup", pararDesenho);
+canvas.addEventListener("mousemove", desenhar);
 
-// Referência ao elemento de largura no HTML
-let largura = document.getElementById("largura");
-
-// Atualiza o conteúdo do elemento de largura
-largura.value = larguraPincel;
-
-// Define a cor padrão do pincel
-let corPincel = "black";
-
-// Adiciona eventos de mouse para detectar cliques, movimentos e solturas do mouse
-canvas.addEventListener("mousedown", function (event) {
+// Função chamada quando o mouse é pressionado
+function iniciarDesenho(e) {
     desenhando = true;
-    contexto.beginPath();
-    contexto.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
-});
+    posicaoAnterior = obterPosicaoMouse(e);
+}
 
-canvas.addEventListener("mousemove", function (event) {
-    if (desenhando) {
-        contexto.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
-        contexto.stroke();
-    }
-});
-
-canvas.addEventListener("mouseup", function () {
+// Função chamada quando o mouse é solto
+function pararDesenho() {
     desenhando = false;
-});
-
-// Adiciona evento de mudança para a largura do pincel
-largura.addEventListener("input", function () {
-    larguraPincel = parseInt(largura.value);
-    contexto.lineWidth = larguraPincel;
-});
-
-// Adiciona evento de mudança para a cor do pincel
-document.getElementById("inputColor").addEventListener("input", function () {
-    corPincel = document.getElementById("inputColor").value;
-    contexto.strokeStyle = corPincel;
-});
-
-// Função para aumentar a largura do pincel
-function maisLargura() {
-    larguraPincel++;
-    contexto.lineWidth = larguraPincel;
-    largura.value = larguraPincel;
 }
 
-// Função para diminuir a largura do pincel
-function menosLargura() {
-    larguraPincel--;
-    contexto.lineWidth = larguraPincel;
-    largura.value = larguraPincel < 1 ? 1 : larguraPincel;
+// Função chamada quando o mouse se move
+function desenhar(e) {
+    if (!desenhando) return;
+
+    var posicaoAtual = obterPosicaoMouse(e);
+
+    // Configurar as propriedades do contexto, como cor e largura da linha
+    ctx.lineWidth = document.getElementById("largura").value;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = document.querySelector("#colors input[type=color]").value;
+
+    // Desenhar uma linha entre a posição anterior e a posição atual
+    ctx.beginPath();
+    ctx.moveTo(posicaoAnterior.x, posicaoAnterior.y);
+    ctx.lineTo(posicaoAtual.x, posicaoAtual.y);
+    ctx.stroke();
+
+    // Atualizar a posição anterior para a posição atual
+    posicaoAnterior = posicaoAtual;
 }
+
+// Função auxiliar para obter a posição do mouse em relação ao canvas
+function obterPosicaoMouse(e) {
+    var retangulo = canvas.getBoundingClientRect();
+    return {
+        x: e.clientX - retangulo.left,
+        y: e.clientY - retangulo.top
+    };
+}
+
 
